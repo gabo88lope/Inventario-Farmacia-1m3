@@ -62,6 +62,7 @@ public class Farmacia {
                                     break;
                                     
                                 case 2:
+                                    System.out.println("que hay de nuevo");
                                     break;
                                     
                                 case 3:
