@@ -66,6 +66,7 @@ public class Farmacia {
                                     break;
                                     
                                 case 3:
+                                    System.out.println("esta es una prueba");
                                     break;
                                     
                                 case 4:
