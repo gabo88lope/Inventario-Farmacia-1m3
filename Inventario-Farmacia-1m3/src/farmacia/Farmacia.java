@@ -58,6 +58,7 @@ public class Farmacia {
                             
                             switch (opc1) {
                                 case 1:
+                                    System.out.println("hola");
                                     break;
                                     
                                 case 2:
