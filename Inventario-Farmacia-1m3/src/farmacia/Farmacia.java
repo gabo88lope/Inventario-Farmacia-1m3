@@ -24,6 +24,8 @@ public class Farmacia {
         String pass=null;
         BufferedReader leer=new BufferedReader(new InputStreamReader(System.in));
         
+        System.out.println("hola ");
+        
         do{
         
             Menu.Principal();
