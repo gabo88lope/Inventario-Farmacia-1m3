@@ -4,7 +4,6 @@
  */
 package farmacia.Metodos;
 import java.util.*;
-import java.io.*;
 /**
  *
  * @author Cristhian
@@ -54,6 +53,22 @@ public class InveDefault {
         
         
         return fe;
+    }
+    
+     public static List<Double> Precios(List<Double> pre)
+    {
+        Random s=new Random();
+        double d=0;
+       for(int i=0;i<10;i++)
+       {
+          d=(double)(i+1)*s.nextInt(4) ;
+         
+         
+          pre.add(i,d+1);
+         
+       }
+        
+        return pre;
     }
     
 }

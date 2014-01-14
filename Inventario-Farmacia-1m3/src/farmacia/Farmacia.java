@@ -27,12 +27,13 @@ public class Farmacia {
      */
     public static void InventarioMain() throws IOException, InterruptedException {
         
-        int opc=0,opc1 = 0;
-        Usuario s=new Usuario();
-        BufferedReader leer=new BufferedReader(new InputStreamReader(System.in));
-        List<Integer> cantidad=new ArrayList<Integer>();
-        List<String> nombres=new ArrayList<String>();
-        List<String> fecha=new ArrayList<String>();
+        int opc = 0, opc1 = 0;
+        Usuario s = new Usuario();
+        BufferedReader leer = new BufferedReader(new InputStreamReader(System.in));
+        List<Integer> cantidad = new ArrayList<Integer>();
+        List<String> nombres = new ArrayList<String>();
+        List<String> fecha = new ArrayList<String>();
+        List<Double> precio = new ArrayList<Double>();
         
         do {                            
             Menu.Inventario();
@@ -59,24 +60,30 @@ public class Farmacia {
                             case 1:
                                 Usuario e=new Usuario();
 
-                                for(int i=0;i<10;i++)
-                                {
+                                for(int i = 0; i < 10; i++){
+                                
                                     cantidad.add(i,InveDefault.Cantidad(cantidad).get(i));
                                 }
 
-                                 for(int i=0;i<10;i++)
-                                 {
+                                for(int i = 0; i < 10; i++){
+                                
 
                                     nombres.add(i, InveDefault.Nombres(nombres).get(i));
-                                 }
-                                        for(int i=0;i<10;i++)
-                                 {
+                                }
+                                for(int i = 0; i < 10; i++){
+                                
 
                                     fecha.add(i, InveDefault.Fecha(fecha).get(i));
-                                 }
+                                }
+                                
+                                for(int i = 0; i < 10; i++) {
+                                    
+                                    precio.add(i, InveDefault.Precios(precio).get(i));
+                                    
+                                }
                              
                              
-                                Listar.RecorrerListas(nombres, cantidad,e,fecha);
+                                Listar.RecorrerListas(nombres, cantidad,e,fecha,precio);
                                 break;
                             case 2:
                                 break;

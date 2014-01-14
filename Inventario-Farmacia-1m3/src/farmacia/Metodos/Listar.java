@@ -15,17 +15,17 @@ import java.util.List;
  */
 public class Listar {
     
-    public static void RecorrerListas(List<String>art,List<Integer>cnt,Usuario e,List<String> fecha)
+    public static void RecorrerListas(List<String>art,List<Integer>cnt,Usuario e,List<String> fecha, List<Double> precio)
     {
         System.out.println("");
         System.out.println("Usuario: "+e.getNombre());
         System.out.println("");
         System.out.println("=======================================================================================");
-        System.out.println("Nombre\t\t    Cantidad\t\tFecha de Vencimiento\t\tPrecio Unitario");
+        System.out.println("Nombre\t\t\tCantidad\tFecha de Vencimiento\t   Precio Unitario");
         System.out.println("=======================================================================================");
         for(int i=0;i<10;i++)
         {
-            System.out.println(art.get(i)+"\t\t"+cnt.get(i)+"\t\t"+fecha.get(i));
+            System.out.println(art.get(i)+"\t\t"+cnt.get(i)+"\t\t"+fecha.get(i)+"\t\t   "+"$ "+precio.get(i));
         }
     }
     

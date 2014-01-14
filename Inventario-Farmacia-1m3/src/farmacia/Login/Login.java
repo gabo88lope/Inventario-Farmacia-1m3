@@ -77,6 +77,12 @@ public class Login extends javax.swing.JFrame {
             }
         });
 
+        pass.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                passKeyPressed(evt);
+            }
+        });
+
         javax.swing.GroupLayout LoginDialogLayout = new javax.swing.GroupLayout(LoginDialog.getContentPane());
         LoginDialog.getContentPane().setLayout(LoginDialogLayout);
         LoginDialogLayout.setHorizontalGroup(
@@ -178,6 +184,10 @@ public class Login extends javax.swing.JFrame {
             }
         } 
     }//GEN-LAST:event_jButton1MousePressed
+
+    private void passKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_passKeyPressed
+      
+    }//GEN-LAST:event_passKeyPressed
 
     /**
      * @param args the command line arguments
