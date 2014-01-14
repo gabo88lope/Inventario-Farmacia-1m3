@@ -102,6 +102,9 @@ public class Menu {
         
     }
     
+    /**
+     *
+     */
     public static void Venta(){
         
         System.out.println("Las Ventas van aca");

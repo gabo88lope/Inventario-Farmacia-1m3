@@ -4,12 +4,12 @@
  * and open the template in the editor.
  */
 
-package farmacia;
+package farmacia.Metodos;
 
 /**
  *
  * @author montano
  */
-public class Listar {
+public class Modificar {
     
 }
