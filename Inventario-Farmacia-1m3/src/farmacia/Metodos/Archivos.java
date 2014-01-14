@@ -16,33 +16,33 @@ import java.io.IOException;
  */
 public class Archivos {
     
-FileInputStream fis;
+    FileInputStream fis;
     FileOutputStream fos;
     File f;
     static String path="File";
-    
+
     public Archivos(String nombre)throws IOException
     {
         f=new File("C:\\Users\\Cristhian\\Documents\\Archivo",nombre+".txt");
-        
+
         if(!f.exists())
         {
             f.createNewFile();
         }
     }
-    
+
     public void crear(String texto)throws FileNotFoundException, IOException
     {
         fos=new FileOutputStream(f,true);
-        
+
         if(texto==null || texto.length()==0)
         {
            return;
         }
-        
+
         fos.write(texto.getBytes());
     }
-    
+
     public String leer() throws FileNotFoundException, IOException
     {
         byte[] a=new byte[(int)f.length()];
@@ -51,15 +51,15 @@ FileInputStream fis;
           System.out.println("No exite archivo");
           return "";
       }
-              
+
         if(fis!=null)
         {
            fis.read(a);
         }
-        
+
         return new String(a);
     }
-    
+
     public void cerrar() throws IOException{
         if(fis==null && fos==null)
         {
