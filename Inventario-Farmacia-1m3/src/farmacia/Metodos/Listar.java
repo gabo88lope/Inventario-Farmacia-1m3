@@ -21,7 +21,7 @@ public class Listar {
         System.out.println("Usuario: "+e.getNombre());
         System.out.println("");
         System.out.println("=======================================================================================");
-        System.out.println("Nombre\t\tCantidad\t\tFecha de Vencimiento\t\tPrecio Unitario");
+        System.out.println("Nombre\t\t    Cantidad\t\tFecha de Vencimiento\t\tPrecio Unitario");
         System.out.println("=======================================================================================");
         for(int i=0;i<10;i++)
         {
