@@ -60,7 +60,11 @@ public class Farmacia {
         
     }
 
-
+    /**
+     *
+     * @throws IOException
+     * @throws InterruptedException
+     */
     public static void VentaMain() throws IOException, InterruptedException {
         
         int opc=0;
