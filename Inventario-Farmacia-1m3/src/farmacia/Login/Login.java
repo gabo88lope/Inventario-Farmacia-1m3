@@ -50,12 +50,6 @@ public class Login extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         pass = new javax.swing.JPasswordField();
         usuario = new javax.swing.JTextField();
-        LoginDialog1 = new javax.swing.JDialog();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
-        pass1 = new javax.swing.JPasswordField();
-        usuario1 = new javax.swing.JTextField();
         jPanel1 = new javax.swing.JPanel();
 
         LoginDialog.addWindowListener(new java.awt.event.WindowAdapter() {
@@ -116,67 +110,6 @@ public class Login extends javax.swing.JFrame {
                 .addGap(27, 27, 27)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(35, 35, 35))
-        );
-
-        LoginDialog1.addWindowListener(new java.awt.event.WindowAdapter() {
-            public void windowClosed(java.awt.event.WindowEvent evt) {
-                LoginDialog1WindowClosed(evt);
-            }
-        });
-
-        jLabel3.setText("Usuario");
-
-        jLabel4.setText("Contraseña");
-
-        jButton2.setText("OK");
-        jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton2MouseClicked(evt);
-            }
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                jButton2MousePressed(evt);
-            }
-        });
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout LoginDialog1Layout = new javax.swing.GroupLayout(LoginDialog1.getContentPane());
-        LoginDialog1.getContentPane().setLayout(LoginDialog1Layout);
-        LoginDialog1Layout.setHorizontalGroup(
-            LoginDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(LoginDialog1Layout.createSequentialGroup()
-                .addContainerGap(35, Short.MAX_VALUE)
-                .addGroup(LoginDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, LoginDialog1Layout.createSequentialGroup()
-                        .addGroup(LoginDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(55, 55, 55)
-                        .addGroup(LoginDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(pass1)
-                            .addComponent(usuario1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(27, 27, 27))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, LoginDialog1Layout.createSequentialGroup()
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(117, 117, 117))))
-        );
-        LoginDialog1Layout.setVerticalGroup(
-            LoginDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(LoginDialog1Layout.createSequentialGroup()
-                .addGap(30, 30, 30)
-                .addGroup(LoginDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(usuario1))
-                .addGap(19, 19, 19)
-                .addGroup(LoginDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(pass1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(29, 29, 29)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(43, 43, 43))
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -246,45 +179,6 @@ public class Login extends javax.swing.JFrame {
         } 
     }//GEN-LAST:event_jButton1MousePressed
 
-    private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
-        LoginDialog1.setVisible(false);
-    }//GEN-LAST:event_jButton2MouseClicked
-
-    private void jButton2MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MousePressed
-        Usuario s = new Usuario();
-        
-        if(usuario.getText().isEmpty() && pass.getText().isEmpty()){
-                        
-           JOptionPane.showMessageDialog(null, "Ingrese su nombre de usuario y contraseña");
-           
-        }else{
-           
-            if(usuario.getText().equals(s.getNombre()) && pass.getText().equals(s.getPass())){
-            
-                LoginDialog1.setVisible(false);
-                
-                try {
-                    Farmacia.VentaMain();
-                } catch (IOException | InterruptedException ex) {
-                    Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
-                }
-           
-            }else{
-            
-                JOptionPane.showMessageDialog(null, "Usuario o contraseña incorrecta");
-
-            }
-        }
-    }//GEN-LAST:event_jButton2MousePressed
-
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-
-    }//GEN-LAST:event_jButton2ActionPerformed
-
-    private void LoginDialog1WindowClosed(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_LoginDialog1WindowClosed
-        
-    }//GEN-LAST:event_LoginDialog1WindowClosed
-
     /**
      * @param args the command line arguments
      * @throws java.io.IOException
@@ -343,14 +237,7 @@ public class Login extends javax.swing.JFrame {
             
             
             case 2:
-                java.awt.EventQueue.invokeLater(new Runnable() {
-                    
-                @Override
-                public void run() {
-                new Login().LoginDialog1.setVisible(true);
-
-                }
-                });
+                Farmacia.VentaMain();
                 break;
             
             
@@ -369,17 +256,11 @@ public class Login extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JDialog LoginDialog;
-    private javax.swing.JDialog LoginDialog1;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPasswordField pass;
-    private javax.swing.JPasswordField pass1;
     private javax.swing.JTextField usuario;
-    private javax.swing.JTextField usuario1;
     // End of variables declaration//GEN-END:variables
 }
