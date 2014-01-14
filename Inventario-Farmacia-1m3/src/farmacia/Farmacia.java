@@ -45,149 +45,160 @@ public class Farmacia {
             }
 
             switch (opc) {
-                case 1:
-                    do{
-                        
-                        Menu.Listar();
-                        
-                        try {
-                            opc1 = Integer.parseInt(leer.readLine());
-                        } catch (NumberFormatException ex) {
-                            ex.getMessage();
+            case 1:
+                do{
+
+                    Menu.Listar();
+
+                    try {
+                        opc1 = Integer.parseInt(leer.readLine());
+                    } catch (NumberFormatException ex) {
+                        ex.getMessage();
+                    }
+
+                    switch(opc1){
+                    case 1:
+
+                        for(int i = 0; i < 10; i++){
+
+                            cantidad.add(i,InveDefault.Cantidad(cantidad).get(i));
                         }
-                        
-                        switch(opc1){
-                            case 1:
-                                Usuario e=new Usuario();
 
-                                for(int i = 0; i < 10; i++){
-                                
-                                    cantidad.add(i,InveDefault.Cantidad(cantidad).get(i));
-                                }
+                        for(int i = 0; i < 10; i++){
 
-                                for(int i = 0; i < 10; i++){
-                                
 
-                                    nombres.add(i, InveDefault.Nombres(nombres).get(i));
-                                }
-                                for(int i = 0; i < 10; i++){
-                                
-
-                                    fecha.add(i, InveDefault.Fecha(fecha).get(i));
-                                }
-                                
-                                for(int i = 0; i < 10; i++) {
-                                    
-                                    precio.add(i, InveDefault.Precios(precio).get(i));
-                                    
-                                }
-                             
-                             
-                                Listar.RecorrerListas(nombres, cantidad,e,fecha,precio);
-                                break;
-                            case 2:
-                                break;
-                            case 3:
-                                break;
-                            case 4:
-                                break;
-                            case 5:
-                                break;
-                            case 6:
-                                break;
-                            case 7:
-                                break;
-                            default:
-                                break;
-                        
+                            nombres.add(i, InveDefault.Nombres(nombres).get(i));
                         }
-                    
-                    }while(opc1!=7);
-                    
-                    break;
+                        for(int i = 0; i < 10; i++){
 
-                case 2:
-                    
-                    do{
-                        
-                        Menu.Modificar();
-                        
-                        try {
-                            opc1 = Integer.parseInt(leer.readLine());
-                        } catch (NumberFormatException ex) {
-                            ex.getMessage();
+
+                            fecha.add(i, InveDefault.Fecha(fecha).get(i));
                         }
-                        
-                        switch(opc1){
-                            case 1:
-                                break;
-                            case 2:
-                                break;
-                            case 3:
-                                break;
-                            case 4:
-                                break;
-                            case 5:
-                                break;
-                            case 6:
-                                break;
-                            default:
-                                break;
-                        
+
+                        for(int i = 0; i < 10; i++) {
+
+                            precio.add(i, InveDefault.Precios(precio).get(i));
+
                         }
-                    
-                    }while(opc1!=6);
-                    
-                    
-                    break;
 
-                case 3:
-                    
-                    do{
-                        Menu.Buscar();
-                        
-                        try {
-                            opc1 = Integer.parseInt(leer.readLine());
-                        } catch (NumberFormatException ex) {
-                            ex.getMessage();
-                        }
-                        
-                        switch(opc1){
-                            case 1:
-                                break;
-                            case 2:
-                                break;
-                            case 3:
-                                break;
-                            case 4:
-                                break;
-                            case 5:
-                                break;
-                            case 6:
-                                break;
-                            case 7:
-                                break;
-                            default:
-                                break;
-                        
-                        }
-                    
-                    }while(opc1!=7);
-                    
-                    
-                    break;
 
-                case 4:
-                    return;
+                        Listar.RecorrerListas(nombres, cantidad,s,fecha,precio);
+                        break;
 
-                case 5:
-                    System.out.println("- - Saliendo del programa - -");
-                    Sleep.s2();
-                    System.exit(0);
-                    break;
+                    case 2:
+                        break;
+                    case 3:
+                        break;
+                    case 4:
+                        break;
+                    case 5:
+                        break;
+                    case 6:
+                        break;
+                    case 7:
+                        System.err.println("- - Saliendo del programa - -");
+                        Sleep.s2();
+                        System.exit(0);
 
-                default:
-                    break;
+                    default:
+                        System.err.println("No ha ingresado una opcion correcta!!");
+                        break;
+
+                    }
+
+                }while(opc1!=7);
+
+                break;
+
+            case 2:
+
+                do{
+
+                    Menu.Modificar();
+
+                    try {
+                        opc1 = Integer.parseInt(leer.readLine());
+                    } catch (NumberFormatException ex) {
+                        ex.getMessage();
+                    }
+
+                    switch(opc1){
+                    case 1:
+                        break;
+                    case 2:
+                        break;
+                    case 3:
+                        break;
+                    case 4:
+                        break;
+                    case 5:
+                        break;
+                    case 6:
+                        System.err.println("- - Saliendo del programa - -");
+                        Sleep.s2();
+                        System.exit(0);
+
+                    default:
+                        System.err.println("No ha ingresado una opcion correcta!!");
+                        break;
+
+                    }
+
+                }while(opc1!=6);
+
+
+                break;
+
+            case 3:
+
+                do{
+                    Menu.Buscar();
+
+                    try {
+                        opc1 = Integer.parseInt(leer.readLine());
+                    } catch (NumberFormatException ex) {
+                        ex.getMessage();
+                    }
+
+                    switch(opc1){
+                    case 1:
+                        break;
+                    case 2:
+                        break;
+                    case 3:
+                        break;
+                    case 4:
+                        break;
+                    case 5:
+                        break;
+                    case 6:
+                        break;
+                    case 7:
+                        System.err.println("- - Saliendo del programa - -");
+                        Sleep.s2();
+                        System.exit(0);
+
+                    default:
+                        break;
+
+                    }
+
+                }while(opc1!=7);
+
+
+                break;
+
+            case 4:
+                break;
+
+            case 5:
+                System.err.println("- - Saliendo del programa - -");
+                Sleep.s2();
+                System.exit(0);
+
+            default:
+                System.err.println("No ha ingresado una opcion correcta!!");
+                break;
             }
         } while (opc!=5);
         
@@ -224,7 +235,7 @@ public class Farmacia {
                     break;
 
                 case 4:
-                    return;
+                    break;
 
                 case 5:
                     break;

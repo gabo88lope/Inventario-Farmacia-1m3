@@ -252,10 +252,13 @@ public class Login extends javax.swing.JFrame {
             
             
             case 3:
-                System.out.println("- - Saliendo del programa - -");
+                System.err.println("- - Saliendo del programa - -");
                 Sleep.s2();
                 System.exit(0);
-                
+            
+            default:
+                System.err.println("No ha ingresado una opcion correcta!!");
+                break;
             }
              
         }while(opc!=3);
