@@ -226,31 +226,21 @@ public class Login extends javax.swing.JFrame {
             }catch(NumberFormatException ex)
             {ex.getMessage();}
             
-            switch(opc){
-                
-                
+            switch(opc){   
             case 1:
-                
-                
-                
                 java.awt.EventQueue.invokeLater(new Runnable() {
                     
                 @Override
                 public void run() {
                 new Login().LoginDialog.setVisible(true);
-                
-
                 }
                 });
-                return;
-
-            
-            
+                return;            
+                        
             case 2:
                 Farmacia.VentaMain();
                 break;
-            
-            
+                
             case 3:
                 System.err.println("- - Saliendo del programa - -");
                 Sleep.s2();
@@ -261,10 +251,7 @@ public class Login extends javax.swing.JFrame {
                 break;
             }
              
-        }while(opc!=3);
-
-        /* Create and display the form */
-        
+        }while(opc!=3);        
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
